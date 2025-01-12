@@ -15,21 +15,25 @@ function DisplayQuestions() {
   return (
     <div className="question-list">
       {questions.map((que) => (
-        <div className="question-block">
-          <p className="question-place">{que}</p>
-          {isOpen && (
-            <p className="answer-block">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
-              facere in labore maxime, assumenda iure sed tenetur alias omnis
-              eveniet similique laborum, neque porro unde ducimus officiis animi
-              vitae! Quidem.
+        <>
+          <div className={isOpen ? "question-block-open" : "question-block"}>
+            <p className="question-place">{que}</p>
+            <p className="collapse" onClick={displayAnswer}>
+              {" "}
+              {isOpen ? "-" : "+"}{" "}
             </p>
+          </div>
+          {isOpen && (
+            <div className="answer-block">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
+                facere in labore maxime, assumenda iure sed tenetur alias omnis
+                eveniet similique laborum, neque porro unde ducimus officiis
+                animi vitae! Quidem.
+              </p>
+            </div>
           )}
-          <p className="collapse" onClick={displayAnswer}>
-            {" "}
-            {isOpen ? "-" : "+"}{" "}
-          </p>
-        </div>
+        </>
       ))}
     </div>
   );

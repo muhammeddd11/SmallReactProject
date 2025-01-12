@@ -38,18 +38,36 @@ h2{
   padding: 10px 200px;
   background-color: #f1f3f5;
   margin-bottom:20px;
-  position:relative;
+  display:flex;
+  align-items:center;
+
+}
+.question-block-open{
+  
+  padding: 10px 200px;
+  background-color: #f1f3f5;
+  margin-bottom:0;
+  display:flex;
+  align-items:center; 
+
 }
 .question-place{
+  width:300px;
   color:#212529;
   font-weight: bold;
-  font-size:24px;
+  font-size:22px;
+  
 }
 .collapse{
-  position:absolute;
-  right:-50px;
-  top:-20px;
   padding:2px 5px;
   background-color:#91a7ff;
   border: 1px solid #364fc7;
+}
+.answer-block{
+  padding: 10px 20px;
+  background-color: #f1f3f5;
+  margin-bottom: 5px;
+}
+.answer-block p{
+  width:100%;
 }
